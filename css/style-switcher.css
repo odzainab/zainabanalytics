@@ -1,0 +1,181 @@
+.style-switcher
+{
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 15px;
+    width: 200px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
+.style-switcher.open
+{
+    transform: translateX(-25px);
+}
+.style-switcher .s-icon
+{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--bg-black-100);
+    color: var(--text-black-900);
+    right: 100%;
+    border: 1px solid var(--bg-black-50);
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+.style-switcher .s-icon i
+{
+    line-height: 40px;
+}
+.style-switcher .style-switcher-toggler
+{
+    top: 0;
+}
+.style-switcher .day-night
+{
+    top: 55px;
+}
+.style-switcher h4
+{
+    margin: 0 0 10px;
+    color: var(--text-black-700);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.style-switcher .colors
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.style-switcher .colors span
+{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.skill-used-box {
+    color: var(--text-black-900);   /* main text color, switches automatically */
+}
+.portfolio-heading h2 {
+    color: var(--text-black-900);   /* section titles */
+}
+/* ===== Certificate Section Dark/Light Mode Styling ===== */
+.certificate-content {
+    color: var(--text-black-900); /* default text color */
+}
+.achievement-content {
+    color: var(--text-black-900);
+}
+
+/* Main section heading */
+.certificate-content h2 {
+    color: var(--text-black-900);
+    font-weight: 700;
+}
+
+.achievement-content h2 {
+    color: var(--text-black-900);
+    font-weight: 700;
+}
+
+/* Subtopic / subtitle */
+.certificate-content .section-subtitle {
+    color: var(--text-black-700);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.achievement-content .section-subtitle {
+    color: var(--text-black-700);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Individual certificate item box */
+.certificate-content .certificate-item {
+    background: var(--bg-black-100); /* box background */
+    border: 1px solid var(--bg-black-50);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.achievement-content .achievement-item {
+    background: var(--bg-black-100); /* box background */
+    border: 1px solid var(--bg-black-50);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Certificate title and span */
+.certificate-content .certificate-item h3,
+.certificate-content .certificate-item h3 span {
+    color: var(--text-black-900); /* ensures white text in dark mode */
+    font-weight: 600;
+}
+.achievement-content .achievement-item h3,
+.achievement-content .achievement-item h3 span {
+    color: var(--text-black-900); /* ensures white text in dark mode */
+    font-weight: 600;
+}
+
+/* “View” button */
+.certificate-content .certificate-item .btn-view {
+    background-color: var(--skin-color);
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-left: 15px; /* optional spacing from title */
+}
+.achievement-content .achievement-item .btn-view {
+    background-color: var(--skin-color);
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-left: 15px; /* optional spacing from title */
+}
+
+.certificate-content .certificate-item .btn-view:hover {
+    background-color: #0056b3; /* darker on hover */
+}
+.achievement-content .achievement-item .btn-view:hover {
+    background-color: #0056b3; /* darker on hover */
+}
+.style-switcher .color-1
+{
+    background: #ec1839;
+}
+.style-switcher .color-2
+{
+    background: #fa5b0f;
+}
+.style-switcher .color-3
+{
+    background: #37b182;
+}
+.style-switcher .color-4
+{
+    background: #1854b4;
+}
+.style-switcher .color-5
+{
+    background: #f021b2;
+}
