@@ -5,7 +5,20 @@
   <title>Excel Analytics Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="project-page">
+
+<script>
+    const savedTheme = localStorage.getItem("theme");
+    const savedSkinColor = localStorage.getItem("skinColor");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    if (savedSkinColor) {
+        document.documentElement.style.setProperty("--skin-color", savedSkinColor);
+    }
+</script>
 
   <section class="portfolio section">
     <div class="container">
@@ -112,7 +125,7 @@
  </div>
 
  <p style="text-align: center; margin-top: 40px;">
-  <a href="index.html#excel-projects-section" class="back-button">Back to Main Page</a>
+  <a href="index.html#portfolio" class="back-button">Back</a>
 </p>
 
  </div>

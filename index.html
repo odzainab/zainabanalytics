@@ -74,6 +74,46 @@
   <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
   <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
   <link rel="stylesheet" href="css/style-switcher.css">
+<script>
+    if (
+        localStorage.getItem("sidebarState") === "collapsed" &&
+        window.innerWidth >= 1200
+    ) {
+        document.documentElement.classList.add("sidebar-collapsed");
+    }
+</script>
+<script>
+(function () {
+
+    const root = document.documentElement;
+
+    const colors = {
+        "color-1": "#ec1839",
+        "color-2": "#fa5b0f",
+        "color-3": "#37b182",
+        "color-4": "#1854b4",
+        "color-5": "#f021b2"
+    };
+
+    const savedTheme = localStorage.getItem("theme");
+    const savedColor = localStorage.getItem("selectedColor") || "color-1";
+
+    /* Apply saved theme immediately */
+    if (savedTheme === "dark") {
+        root.style.setProperty("--bg-black-900", "#151515");
+        root.style.setProperty("--bg-black-100", "#222222");
+        root.style.setProperty("--bg-black-50", "#393939");
+        root.style.setProperty("--text-black-900", "#ffffff");
+        root.style.setProperty("--text-black-700", "#e9e9e9");
+    }
+
+    /* Apply saved accent color immediately */
+    if (colors[savedColor]) {
+        root.style.setProperty("--skin-color", colors[savedColor]);
+    }
+
+})();
+</script>
 </head>
 <body>
   <!-- ===== Main Container Start ===== -->
@@ -87,14 +127,14 @@
         <span></span>
       </div>
       <ul class="nav">
-        <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-        <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
-        <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-        <li><a href="#certificate"><i class="fas fa-certificate"></i>Certificate</a></li>
-        <li><a href="#achievement"><i class="fas fa-trophy"></i>Achievement</a></li>
-        <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
-      </ul>
+    <li><a href="#home" class="active" data-tooltip="Home"><i class="fa fa-home"></i> Home</a></li>
+    <li><a href="#about" data-tooltip="About"><i class="fa fa-user"></i> About</a></li>
+    <li><a href="#services" data-tooltip="Services"><i class="fa fa-list"></i> Services</a></li>
+    <li><a href="#portfolio" data-tooltip="Portfolio"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+    <li><a href="#certificate" data-tooltip="Certificate"><i class="fas fa-certificate"></i> Certificate</a></li>
+    <li><a href="#achievement" data-tooltip="Achievement"><i class="fas fa-trophy"></i> Achievement</a></li>
+    <li><a href="#contact" data-tooltip="Contact"><i class="fa fa-comments"></i> Contact</a></li>
+</ul>
     </div>
     <!-- ===== Aside End ===== -->
     <!-- ===== Main Content Start ===== -->
@@ -104,10 +144,9 @@
         <div class="container">
           <div class="row">
             <div class="home-info padd-15">
-              <h3 class="hello">Hello, my name is Odunlami Zainab</h3>
-              <h3 class="my-profession">I'm a <span class="typing">Data Analyst</span></h3>
-              <p>IBM Certified Data Analyst & Business Intelligence Professional turning data into actionable insights. 
-                Skilled in Excel, SQL, and Power BI. Focused on building dreams through data....</p>
+              <h3 class="hello"><em>Numbers tell half the story</em></h3>
+              <h3 class="my-profession">I’m Odunlami Zainab, a <span class="typing">Data Analyst</span></h3>
+              <p>I look beyond the numbers to understand what happened, why it happened, and what the data is really saying. Then turn those findings into clear, actionable insights.</p>
                 <a href="certificates/Odunlami Zainab Motunrayo_Resume.pdf" class="btn" download>Download CV</a>
             </div>
             <div class="home-img padd-15">
@@ -129,54 +168,39 @@
             <div class="about-content padd-15">
               <div class="row">
                 <div class="about-text padd-15">
-                  <h3>Odunlami Zainab | Data Analyst</h3>
-                  <p>I	am	a	recent	MBA	graduate	from	Multimedia	University	with	a	comprehensive	IBM	Data	Analyst	certification,	and	I	am	excited	about	
-the	opportunity	to	contribute	to data-driven	decision-making	initiatives.	What	particularly draws	me	to	data analytics	is commitment	to	leveraging	analytics	for	strategic	business	growth,	and	I	am	
-confident	that	my	unique	combination	of	business	acumen	and	technical	expertise	would	make	me	a	valuable	addition	to	whatever project I work on.</p>
+                  <p>I’m Odunlami Zainab, a Data Analyst with a background in accounting and finance, and I’ve always been curious about what numbers are really trying to tell us.</p>
 <br>
-            <p>Throughout	my	intensive	analytics	training	and	recent	MBA	program,	I	have	demonstrated	solid	proficiency	in	
-SQL, Excel and	Power	BI	for	complex	data	analysis	and	visualisation.	My	capstone	projects	
-have	included	identifying	a	critical	49%	year-over-year	revenue	decline	through	comprehensive	sales	analysis	and	
-developing	workforce	optimisation	strategies	using	SQL-driven	analytics.	I	possess	excellent	project	management	
-and	analytical	thinking	skills,	which	have	enabled	me	to	successfully	balance	rigorous	academic	coursework,	
-professional	certification	programs,	and	hands-on	data	analytics	training	simultaneously.</p>
+            <p>My journey into analytics started with finance, where I learned that numbers represent more than figures-they represent decisions, opportunities, and problems waiting to be understood. That perspective still shapes how I work with data today. I don’t just want to know what happened; I want to understand why it happened and what should happen next.</p>
+           <br>
+            <p>Today, I use SQL, Excel, Power BI, and data visualisation to turn complex datasets into clear, useful insights. My MBA and finance background help me connect the technical side of analytics with the business context behind the numbers.</p>
 <br>
-           <p>My internship	with	Intern	Pulse	has	provided	valuable	opportunities	to	apply	advanced	analytics	in	real
-world	business	scenarios.	I	have	led	cross-functional	teams	in	sprint-based	analytics	projects,	developed	
-interactive	dashboards	for	executive	reporting,	and	presented	data-driven	insights	to	senior	leadership.	My	
-background	in	accounting	and	finance,	combined	with	my	MBA	education,	allows	me	to	understand	the	business	
-context	behind	the	data	and	translate	complex	analytical	findings	into	actionable	strategic	recommendations.	I	am	
-confident	that	I	can	leverage	these	skills,	along	with	my	IBM	certification	and	practical	experience,	to	help	drive	
-innovative	data	solutions	for	your	organisation.</p>
-
+           <p>I’m continually learning through real-world projects, hands-on challenges, and building solutions that make data easier to understand and act on.</p>
+<br>
+           <p>Because to me, good analysis isn’t about making data look impressive.</p>
+<br>
+           <p>It’s about making it make sense.</p>
                 </div>
               </div>
               <div class="row">
                 <div class="personal-info padd-15">
                   <div class="row">
                     <div class="info-item padd-15">
-                      <p>Birthday: <span>19 may 1999</span></p>
+                      <p>Degree: <span>MBA</span></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Age: <span>27</span></p>
+                      <p>Email: <a href="mailto:bloomlytic@gmail.com">Send an Email</a></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Linkedln: <a href="https://www.linkedin.com/in/odzainab/" target="_blank">https://www.linkedin.com/in/odzainab/</a></p>
+                      <p>Linkedln: <a href="https://www.linkedin.com/in/odzainab/" target="_blank">View Profile</a></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Email: <a href="mailto:odzainab1@gmail.com">odzainab1@gmail.com</a></p>
+                      <p>Upwork: <a href="https://www.upwork.com/freelancers/~0146b8d87f62628056" target="_blank">View Profile</a></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Degree: <span>Masters In Business Administration</span></p>
+                      <p>City: <span>Lagos State, Nigeria</span></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Phone: <span>+60 115 119 0227</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>City: <span>Kuala Lumpur, Malaysia</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Freelance: <span>Available</span></p>
+                      <p>Availability: <span>Open to Opportunities</span></p>
                     </div>
                   </div>
                   <div class="row">
@@ -188,31 +212,32 @@ innovative	data	solutions	for	your	organisation.</p>
                 <div class="skills padd-15">
                   <div class="row">
                     <div class="skill-item padd-15">
-                      <h5>Excel</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 98%;"></div>
-                        <div class="skill-percent">98%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>SQL</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 98%;"></div>
-                        <div class="skill-percent">98%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Power BI</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 98%;"></div>
-                        <div class="skill-percent">98%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Data Cleaning & Visualization</h5>
+                      <h5>Data Analysis <em></em></h5>
                       <div class="progress">
                         <div class="progress-in" style="width: 100%;"></div>
-                        <div class="skill-percent">100%</div>
+                        <div class="skill-percent"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5>Business Intelligence & Data Visualization <em></em></h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 100%;"></div>
+                        <div class="skill-percent"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5> Business & Productivity <em></em></h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 100%;"></div>
+                        <div class="skill-percent"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5>Communication & Collaboration <em></em></h5>
+
+                      <div class="progress">
+                        <div class="progress-in" style="width: 100%;"></div>
+                        <div class="skill-percent"></div>
                       </div>
                     </div>
                   </div>
@@ -224,16 +249,7 @@ innovative	data	solutions	for	your	organisation.</p>
                   <div class="row">
                     <div class="timeline-box padd-15">
                       <div class="timeline shadow-dark">
-                        <!-- ===== timeline item ===== -->
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i>2025
-                          </h3>
-                          <h4 class="timeline-title">Data Analytics Professional Certificate</h4>
-                          <p class="timeline-text">During my 5-month Data Analytics course with Digitaley Drive, I gained hands-on experience in using key tools and techniques. I mastered SQL for managing and querying large datasets, developed expertise in data cleaning to ensure accuracy, and learned how to create interactive reports with Power BI. Additionally, I gained foundational knowledge in Python for data analysis and improved my ability to make data-driven decisions through
-                             statistical analysis and problem-solving techniques.</p>
-                        </div>
+                      
                              <!-- ===== timeline item ===== -->
                              <div class="timeline-item">
                               <div class="circle-dot"></div>
@@ -267,37 +283,42 @@ innovative	data	solutions	for	your	organisation.</p>
                   <div class="row">
                     <div class="timeline-box padd-15">
                       <div class="timeline shadow-dark">
+                      <!-- ===== timeline item ===== -->
+                                    <div class="timeline-item">
+                              <div class="circle-dot"></div>
+                              <h3 class="timeline-date">
+                                <i class="fa fa-calendar"></i> 2026 
+                              </h3>
+                              <h4 class="timeline-title">Program Lead @ Skills To Career</h4>
+                            <p class="timeline-text">Coordinated communication, activities and partiticipant follow-ups to keeep the program activities organized.</p>
+                           <p class="timeline-text">Responded to learners questions and providded guidance, helped particioant navigate program requirement.</p>                                                      
+                           <p class="timeline-text">Collaborated with team members and participants across digital platforms to manage muptiple activities follow-ups and deadline effectively.</p>
+                            </div> 
                         <!-- ===== timeline item ===== -->
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2025 - 2025
+                            <i class="fa fa-calendar"></i> 2025
                           </h3>
-                          <h4 class="timeline-title">Data Analyst (Intern) Intern Pulse, Remote</h4>
+                          <h4 class="timeline-title">Data Analyst (Intern) @ Intern Pulse, Remote</h4>
                         <p class="timeline-text">Collaborated with cross-functional teams in 2-week sprint cycles to deliver actionable data analysis and business insights.</p>
-<p class="timeline-text">Prepared and presented stakeholder reports highlighting ROI projections, KPIs and performance metrics, supporting data-driven decision-making.</p>
-<p class="timeline-text">Transformed raw business datasets using ETL (data extraction, cleaning, transformation, and preparation) processes in Excel, Power BI, and SQL for reporting requirements.</p>
-<p class="timeline-text">Built interactive dashboards to monitor customer acquisition costs, conversion rates, revenue performance, and other key metrics, applying data visualization best practices.</p>
-<p class="timeline-text">Applied analytical techniques including predictive modeling concepts, trend analysis, customer lifetime value (CLV) estimation, and market segmentation during analytics projects and coursework.</p>
-
-                        </div>
+                        <p class="timeline-text">Prepared and presented stakeholder reports highlighting ROI projections, KPIs and performance metrics, supporting data-driven decision-making.</p>
+                        <p class="timeline-text">Transformed raw business datasets using ETL (data extraction, cleaning, transformation, and preparation) processes in Excel, Power BI, and SQL for reporting requirements.</p>
+                        <p class="timeline-text">Built interactive dashboards to monitor customer acquisition costs, conversion rates, revenue performance, and other key metrics, applying data visualization best practices.</p>
+ 
+                        </div>                       
                              <!-- ===== timeline item ===== -->
                              <div class="timeline-item">
                               <div class="circle-dot"></div>
                               <h3 class="timeline-date">
                                 <i class="fa fa-calendar"></i> 2017 - 2018
                               </h3>
-                              <h4 class="timeline-title">Customer Service Representative</h4>
-                            <p class="timeline-text">Escalated complex issues appropriately while maintaining professional tone and customer confidence.</p>
-                           <p class="timeline-text">Supported team targets by adapting quickly to rotating shifts, workload changes, and customer demands.</p>
+                              <h4 class="timeline-title">Customer Service Representative @ Kowel Global Enterprises</h4>
+                            <p class="timeline-text">Escalated complex issues appropriately while maintaining professional tone and customer confidence.</p>                          
                             <p class="timeline-text">Handled 20+ daily inbound and outbound customer inquiries while meeting service quality expectations.</p>
                            <p class="timeline-text">Accurately documented customer interactions and resolutions with over 95% record completion accuracy.</p>
-                           <p class="timeline-text">Clarified customer needs through effective questioning to support first-contact resolution and satisfaction.</p>
                            <p class="timeline-text">Listened actively to customer concerns, showed empathy, and built rapport during high-volume interactions.</p>
-                           <p class="timeline-text">Maintained working knowledge of company products and services to deliver consistent, accurate information.</p>
-                           <p class="timeline-text">Followed scripts, procedures, and quality standards to meet contractual performance indicators consistently.</p>
-                            </div>
-                                 <!-- ===== timeline item ===== -->
+                            </div> 
                       </div>
                     </div>
                   </div>
@@ -636,8 +657,8 @@ innovative	data	solutions	for	your	organisation.</p>
           </div>
           <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
           <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
-          <div class="row">
-            <!-- ===== Contact info item start ====== -->
+          <div class="row contact-info-row">
+           <!-- ===== Contact info item start ====== -->
             <div class="contact-info-item padd-15">
               <div class="icon"><i class="fa fa-phone"></i></div>
               <h4>Whatsapp</h4>
@@ -658,10 +679,13 @@ innovative	data	solutions	for	your	organisation.</p>
               <h4>Email</h4>
               <p><a href="mailto:odzainab1@gmail.com">odzainab1@gmail.com</a></p>
 
-            </div>
+                       </div>
             <!-- ===== Contact info item end ====== -->
-       <!-- ====== Contact Form Start ====== -->
-<div class="row">
+
+          </div> <!-- Close Contact Info row -->
+
+          <!-- ====== Contact Form Start ====== -->
+          <div class="row">
   <div class="contact-form padd-15">
     <form id="contactForm">
       
