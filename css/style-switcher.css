@@ -153,11 +153,11 @@
     margin-left: 15px; /* optional spacing from title */
 }
 
-.certificate-content .certificate-item .btn-view:hover {
-    background-color: #0056b3; /* darker on hover */
-}
-.achievement-content .achievement-item .btn-view:hover {
-    background-color: #0056b3; /* darker on hover */
+.certificate-content .certificate-item .btn-view:hover,
+.achievement-content .achievement-item .btn-view:hover
+{
+    background-color: var(--skin-color);
+    transform: scale(1.05);
 }
 .style-switcher .color-1
 {
@@ -178,4 +178,12 @@
 .style-switcher .color-5
 {
     background: #f021b2;
+}
+
+/* Make Certificate and Achievement boxes fit their content */
+.certificate-content .certificate-item,
+.achievement-content .achievement-item
+{
+    width: fit-content;
+    max-width: 100%;
 }

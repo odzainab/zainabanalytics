@@ -21,6 +21,7 @@ body
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins' sans-serif;
+    background: var(--bg-black-900);
 }
 *
 {
@@ -150,7 +151,7 @@ body.project-page .section {
 {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 .section-title h2
 {
@@ -330,6 +331,7 @@ body.project-page .section {
 .aside .nav
 {
     margin-top: 50px;
+    transform: translateY(25px);
 }
 .aside .nav li
 {
@@ -1144,5 +1146,521 @@ html.preload *::after
     animation: none !important;
 }
 
+@media (min-width: 1200px)
+{
+    html.sidebar-changing .section
+    {
+        transition: none !important;
+    }
+}
+
+/* =========================================================
+   TECHNICAL SKILLS / TOOLKIT
+   ========================================================= */
+
+.toolkit-heading
+{
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 55px;
+}
+
+.toolkit-eyebrow
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.toolkit-eyebrow span
+{
+    width: 35px;
+    height: 3px;
+    background: var(--skin-color);
+    display: block;
+}
+
+.toolkit-eyebrow p
+{
+    margin: 0;
+    color: var(--skin-color);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.toolkit-heading h2
+{
+    font-size: 48px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.toolkit-intro
+{
+    margin: 0 auto;
+    max-width: 720px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-black-700);
+}
 
 
+/* ===== Filters ===== */
+
+.toolkit-filters
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.toolkit-filter
+{
+    border: 1px solid var(--bg-black-50);
+    background: transparent;
+    color: var(--text-black-700);
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.toolkit-filter:hover
+{
+    border-color: var(--skin-color);
+    color: var(--skin-color);
+}
+
+.toolkit-filter.active
+{
+    background: var(--skin-color);
+    border-color: var(--skin-color);
+    color: #ffffff;
+}
+
+
+/* ===== Grid ===== */
+
+.toolkit-grid
+{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+
+/* ===== Card ===== */
+
+.toolkit-card-item
+{
+    display: block;
+}
+
+.toolkit-card-item.is-hidden
+{
+    display: none;
+}
+
+.toolkit-card
+{
+    min-height: 165px;
+    width: 100%;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.toolkit-card:hover
+{
+    transform: translateY(-6px);
+    border-color: var(--skin-color);
+    box-shadow: 0 12px 30px rgba(48, 46, 77, 0.10);
+}
+
+
+/* ===== Logo / Icon Area ===== */
+
+.tool-logo
+{
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* ===== Tool-specific marks ===== */
+
+.excel-logo
+{
+    background: #21a366;
+    color: #ffffff;
+}
+
+.sql-logo
+{
+    background: #0078d4;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.dax-logo
+{
+    background: #f2c811;
+    color: #222222;
+    font-size: 17px;
+}
+
+.mysql-logo
+{
+    background: #00758f;
+    color: #ffffff;
+}
+
+.azure-logo
+{
+    background: #0078d4;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.ibm-logo
+{
+    background: #0f62fe;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.powerbi-logo
+{
+    background: #f2c811;
+    color: #222222;
+}
+
+.zoomcharts-logo
+{
+    background: var(--skin-color);
+    color: #ffffff;
+}
+
+.word-logo
+{
+    background: #2b579a;
+    color: #ffffff;
+}
+
+.powerpoint-logo
+{
+    background: #d24726;
+    color: #ffffff;
+}
+
+.google-logo
+{
+    background: #ffffff;
+    color: #4285f4;
+    border: 1px solid var(--bg-black-50);
+}
+
+.teams-logo
+{
+    background: #6264a7;
+    color: #ffffff;
+}
+
+.zoom-logo
+{
+    background: #2d8cff;
+    color: #ffffff;
+}
+
+.meet-logo
+{
+    background: #34a853;
+    color: #ffffff;
+}
+
+.figma-logo
+{
+    background: #f24e1e;
+    color: #ffffff;
+}
+
+.github-logo
+{
+    background: #181717;
+    color: #ffffff;
+}
+
+.ai-logo
+{
+    background: var(--text-black-900);
+    color: var(--bg-black-900);
+}
+
+.toolkit-card h4
+{
+    margin: 0;
+    color: var(--text-black-900);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* ===== Responsive ===== */
+
+@media (min-width:1500px)
+{
+    .toolkit-grid
+    {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+
+@media (max-width:1199px)
+{
+    .toolkit-grid
+    {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .toolkit-heading h2
+    {
+        font-size: 42px;
+    }
+}
+
+@media (max-width:767px)
+{
+    .toolkit-heading
+    {
+        margin-bottom: 40px;
+    }
+
+    .toolkit-heading h2
+    {
+        font-size: 34px;
+    }
+
+    .toolkit-eyebrow p
+    {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .toolkit-filters
+    {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+    }
+
+    .toolkit-filters::-webkit-scrollbar
+    {
+        display: none;
+    }
+
+    .toolkit-filter
+    {
+        white-space: nowrap;
+    }
+
+    .toolkit-grid
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .toolkit-card
+    {
+        min-height: 145px;
+        padding: 20px 10px;
+    }
+
+    .tool-logo
+    {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .toolkit-card h4
+    {
+        font-size: 14px;
+    }
+}
+
+.toolkit .section-title
+{
+    margin-bottom: -45px !important;
+}
+
+/* =========================================================
+   TOOLKIT COMPACT GRID
+   ========================================================= */
+
+.toolkit-grid
+{
+    gap: 14px;
+}
+
+.toolkit-card
+{
+    min-height: 115px;
+    padding: 20px 10px;
+    border-radius: 16px;
+}
+
+.tool-logo
+{
+    width: 42px;
+    height: 42px;
+    margin-bottom: 10px;
+}
+
+.toolkit-card h4
+{
+    font-size: 13px;
+    line-height: 1.25;
+}
+
+
+/* Large desktop — 9 tools per row */
+@media (min-width: 1500px)
+{
+    .toolkit-grid
+    {
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+    }
+}
+
+
+/* Normal desktop — 6 tools per row */
+@media (min-width: 1200px) and (max-width: 1499px)
+{
+    .toolkit-grid
+    {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+
+
+/* Tablet — 4 tools per row */
+@media (min-width: 768px) and (max-width: 1199px)
+{
+    .toolkit-grid
+    {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+
+/* Mobile — 2 tools per row */
+@media (max-width: 767px)
+{
+    .toolkit-grid
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .toolkit-card
+    {
+        min-height: 135px;
+        padding: 18px 8px;
+    }
+
+    .tool-logo
+    {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 12px;
+    }
+
+    .toolkit-card h4
+    {
+        font-size: 13px;
+    }
+}
+
+/* About Me — keep all contact details on one clean line */
+.about .about-content .personal-info
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .personal-info .row
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.about .about-content .personal-info .info-item
+{
+    flex: 0 0 auto;
+    max-width: none;
+}
+
+.about .about-content .personal-info .info-item p
+{
+    white-space: nowrap;
+}
+
+.about .about-content .personal-info
+{
+    margin-top: 15px;
+}
+
+.about .about-content .personal-info .buttons
+{
+    width: 100%;
+    text-align: center;
+}
+
+/* Make Certificate and Achievement boxes fit their content */
+.certificate-content .certificate-item,
+.achievement-content .achievement-item
+{
+    width: fit-content;
+    max-width: 100%;
+}
